@@ -39,7 +39,7 @@ const ValueAdder = ({displayButton, targetRef}) => {
 
     const addThisItem = async (e) => {
         e.preventDefault();        
-        if (modal.id !== undefined) {
+        if (modal.id !== undefined && modal.id !== null) {
 
             const tempEle = renderRec
                 .filter((ele) => ele.id === modal.slipId)
@@ -49,6 +49,7 @@ const ValueAdder = ({displayButton, targetRef}) => {
                 }));
 
             const tempItem = tempEle[0].items.filter((item) => item.id === modal.id);
+            console.log('found ',tempItem,modal);
 
             const upcomingTotal = tempEle[0].total - tempItem[0].value + parseInt(modal.value);
 
