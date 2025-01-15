@@ -5,8 +5,8 @@ const RecordContext = createContext();
 export const RecordProvider = ({ children }) => {
     const [user, setUser] = useState({});
     let db = undefined;
-    const storeName = 'NewStore';
-    const dbName = 'temp13';
+    const storeName = import.meta.env.VITE_STORE;
+    const dbName = import.meta.env.VITE_DATABASE;
 
     const initializeIndexedDB = async () => {
         try{
