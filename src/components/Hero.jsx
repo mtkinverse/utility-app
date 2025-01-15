@@ -6,7 +6,7 @@ const Hero = () => {
                     <div id="heroLeft" className="sm:max-w-[70%] h-full p-2">
                         <img 
                         // src="https://cdn.dribbble.com/users/2004171/screenshots/5646149/media/0293fa82c082ce0da448d01c2daacaa5.gif"
-                        src="/logoMine2.png"
+                        src={`${import.meta.env.BASE_URL}logoMine2.png`}
                         alt="A Greeting Picture"
                         className="w-full h-auto min-w-[50vw] 2xl:min-w-0"
                         />
